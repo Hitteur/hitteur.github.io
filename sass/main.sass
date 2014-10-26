@@ -22,8 +22,8 @@
   min-height: 200px
   margin-top: 40px
   @media #{$small-only}
-    margin-top: 30px
-    min-height: 100px
+    margin-top: 40px
+    min-height: 180px
 
 /**
  * Nav
@@ -53,6 +53,7 @@ ul.menu
   box-shadow: none
   @media #{$small-only}
     padding: 20px
+    border: 1px solid $primary-color
   &.boxed
     border: 2px solid white
     //box-shadow: 0 0 100px #000
@@ -60,6 +61,7 @@ ul.menu
     color: $notice_text !important
   .newsletter-widget
     input.newsletter-signup
+      height: 31px
       background: $notice_bg
       color: $notice_text
       border-bottom: $notice_text 1px solid
@@ -106,6 +108,10 @@ ul.menu
 button.postfix.button
   &.hide
     opacity: 0
+    max-height: 0
+    overflow: hidden
+    margin: 0 !important
+    margin-top: 25px !important
   @media #{$small-only}
     margin: 20px auto !important
     max-width: 120px
@@ -124,6 +130,8 @@ button.postfix.button
   a
     display: inline-block
     margin: 10px 30px
+  @media #{$small-only}
+    margin-top: 10px
 /**
  * Footer
  */
