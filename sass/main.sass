@@ -1,0 +1,164 @@
+@import 'settings'
+@import 'foundation/components/grid'
+@import 'foundation/components/block-grid'
+@import 'foundation/components/forms'
+@import 'foundation/components/clearing'
+@import 'foundation/components/buttons'
+@import 'foundation/components/visibility'
+@import 'foundation/components/inline-lists'
+@import 'foundation/components/type'
+@import 'bourbon'
+
+/**
+ * Logo
+ */
+.main-logo
+  display: block
+  @include retina-image('/img/logo', contain)
+  background:
+    size: contain
+    repeat: no-repeat
+    position: center center
+  min-height: 200px
+  margin-top: 40px
+  @media #{$small-only}
+    margin-top: 30px
+    min-height: 100px
+
+/**
+ * Nav
+ */
+ul.menu
+  list-style: none
+  margin: 20px auto
+  padding: 0
+  li
+    display: inline-block
+    margin: 5px 30px
+    a
+      text-decoration: none !important
+      &.selected
+        text-decoration: underline !important
+
+/**
+ * Pop-up notice
+ */
+.notice
+  background: $notice_bg
+  color: $notice_text
+  margin: 40px auto
+  padding: 40px 20px
+  border: 2px solid $primary-color
+  @include transition(all 0.5s)
+  box-shadow: none
+  @media #{$small-only}
+    padding: 20px
+  &.boxed
+    border: 2px solid white
+    //box-shadow: 0 0 100px #000
+  a
+    color: $notice_text !important
+  .newsletter-widget
+    input.newsletter-signup
+      background: $notice_bg
+      color: $notice_text
+      border-bottom: $notice_text 1px solid
+    button.postfix.button
+      border: 1px solid $notice_text
+
+.about
+  margin: 40px auto
+  padding: 40px 20px
+
+/**
+ * Newsletter Widget
+ */
+.newsletter-widget
+  margin-top: 40px
+  display: inline-block
+  .thanks
+    display: none
+  button.postfix.button
+    @include transition(all 0.7s)
+    opacity: 1
+  button.postfix.button,
+  input
+    height: 1.9em
+    line-height: 1.9em
+    padding: 2px 6px
+    margin: 0
+  input.newsletter-signup
+    display: inline-block
+    width: auto
+    min-width: 10em
+    border:
+      top: none
+      left: none
+      right: none
+    &:focus
+      border: solid 1px #000
+      border-bottom: solid 1px #000
+.footer-row
+  .newsletter-widget
+    margin-top: 20px
+  .signup-box.row
+    margin-left: 0
+button.postfix.button
+  &.hide
+    opacity: 0
+  @media #{$small-only}
+    margin: 20px auto !important
+    max-width: 120px
+.signup-box
+  display: inline-block
+  position: relative
+  @media #{$small-only}
+    display: block
+
+
+/**
+ * Social Links
+ */
+.social-links
+  margin-top: 40px
+  a
+    display: inline-block
+    margin: 10px 30px
+/**
+ * Footer
+ */
+.bottom-row
+  margin: 20px 0
+  clear: both
+  position: relative
+.footer-row
+  @media #{$small-only}
+    .bottom-row
+      text-align: center
+  .signup-box
+    margin-right: 0
+  .newsletter-widget
+    display: block
+  input.newsletter-signup
+    width: 140px
+  button.postfix.button
+    &.hide
+      display: none
+
+/**
+ * Address Row
+ */
+.address-row
+  margin: 50px auto
+  @media #{$small-only}
+    text-align: center
+  h4
+    font-style: italic
+    font-weight: bold
+    font-size: 16px
+  p
+    font-size: 13px
+    line-height: 1
+    margin: 3px 0
+    &.double-p
+      margin: 10px 0

@@ -1,0 +1,29 @@
+{% macro newsletter(columns = false) %}
+{% if columns != true %}
+{% set class = 'bottom-row' %}
+{% endif %}
+<!-- Newsletter Signup Widget -->
+<div class="newsletter-widget {{ class }}">
+  <div class="thanks">
+    Thanks! You're on the list.
+  </div>
+  <form action="//hitteur.us9.list-manage.com/subscribe/post?u=6ad76e264d2dabb0114467775&amp;id=79345e17b2" target="_blank" name="newsletter" method="post">
+    Sign up to our newsletter
+    <div class="signup-box row">
+      {% if columns %}
+      <div class="small-12 medium-8 columns">
+      {% endif %}
+        <input class="newsletter-signup" type="email" name="EMAIL">
+      {% if columns %}
+      </div>
+      <div class="small-12 medium-4 columns">
+     <div style="position: absolute; left: -5000px;"><input type="text" name="b_6ad76e264d2dabb0114467775_79345e17b2" tabindex="-1" value=""></div>
+      {% endif %}
+        <button class="button postfix hide" type="submit">Go</button>
+      {% if columns %}
+      </div>
+      {% endif %}
+    </div>
+  </form>
+</div>
+{% endmacro %}
