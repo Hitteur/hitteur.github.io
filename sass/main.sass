@@ -19,8 +19,9 @@
     size: contain
     repeat: no-repeat
     position: center center
-  min-height: 200px
+  min-height: 85px
   margin-top: 40px
+  margin-bottom: 40px
   @media #{$small-only}
     margin-top: 40px
     min-height: 180px
@@ -37,7 +38,15 @@ ul.menu
     margin: 5px 30px
     a
       text-decoration: none !important
-      &.selected
+.frontpage
+  ul.menu
+    li
+      a.about-link
+        text-decoration: underline !important
+.about-page
+  ul.menu
+    li
+      a.home-link
         text-decoration: underline !important
 
 /**
@@ -66,6 +75,7 @@ ul.menu
       color: $notice_text
       border-bottom: $notice_text 1px solid
     button.postfix.button
+      margin-top: 4px
       border: 1px solid $notice_text
 
 .about
@@ -101,6 +111,7 @@ ul.menu
       border: solid 1px #000
       border-bottom: solid 1px #000
 .footer-row
+  margin-bottom: 40px
   .newsletter-widget
     margin-top: 20px
   .signup-box.row
